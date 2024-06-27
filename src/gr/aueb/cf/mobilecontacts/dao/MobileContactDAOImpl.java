@@ -2,9 +2,7 @@ package gr.aueb.cf.mobilecontacts.dao;
 
 import gr.aueb.cf.mobilecontacts.model.MobileContact;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class MobileContactDAOImpl implements IMobileContactDAO {
     private final static List<MobileContact> contacts = new ArrayList<>();
@@ -52,7 +50,7 @@ public class MobileContactDAOImpl implements IMobileContactDAO {
 
     @Override
     public List<MobileContact> getAll() {
-        return new ArrayList<>(contacts);
+        return new ArrayList<>(contacts); // Collections.unmodifiableList(contacts);
     }
 
     @Override
