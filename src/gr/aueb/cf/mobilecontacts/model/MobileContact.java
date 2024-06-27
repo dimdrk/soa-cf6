@@ -40,11 +40,9 @@ public class MobileContact extends AbstractEntity implements IdentifiableEntity 
 
     @Override
     public String toString() {
-        return "MobileContact{" +
-                "id=" + getId() +
-                "userDetails=" + userDetails +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                '}';
+        return "Firstname: " + userDetails.getFirstname() +
+                "Lastname: " + userDetails.getLastname() +
+                ", phoneNumber: " + getPhoneNumber();
     }
 
     @Override
